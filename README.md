@@ -15,7 +15,7 @@ Given:
 ENGINE:
 
 - learns a **single environmental embedding** (a weighted combination of environments),
-- estimates **variance components** \(\sigma_g^2, \sigma_{g\times e}^2, \sigma_{n\times e}^2, \sigma_e^2\),
+- estimates **variance components** $\sigma_g^2, \sigma_{g\times e}^2, \sigma_{n\times e}^2, \sigma_e^2$,
 
 This repository contains the main script `engine.py` and an example script `run_sims.sh`.
 
@@ -193,7 +193,7 @@ for the full help message.
 - `--pheno-file`: phenotype file (optional).
 - `--pheno-name`: phenotype column name in `--pheno-file` (default: `PHENO`).
 - `--num-samples`: number of individuals to use (rows subset from PLINK).
-- `--col-start`, `--col-stop`: SNP index range \([start, stop]\); `--col-stop -1` → use all SNPs.
+- `--col-start`, `--col-stop`: SNP index range $[start, stop]$; `--col-stop -1` → use all SNPs.
 
 ### Simulation parameters
 
@@ -211,21 +211,21 @@ for the full help message.
 
 ### Optimization & regularization
 
-- `--iters`: max iterations for learning the embedding \(\alpha\).
+- `--iters`: max iterations for learning the embedding $\alpha$.
 - `--step`: base step size for geodesic updates on the unit sphere.
 - `--B`: number of Hutchinson probes for GRM trace estimation.
 - `--block-snps`: SNP block size for streaming over the genotype matrix.
 - `--kgxew-fp32`: store certain large tensors in float32 to reduce memory.
-- `--l1-tau`: base strength of spherical soft-thresholding on \(\alpha\).
+- `--l1-tau`: base strength of spherical soft-thresholding on $\alpha$.
 - `--l1-anneal`: annealing schedule for `--l1-tau` (`none`, `linear`, `cosine`).
-- `--l1-tau-min`: final \(\tau\) when using annealing.
-- `--nonneg-sigma`: enforce \(\sigma_g, \sigma_{g×e}, \sigma_{n×e}, \sigma_e \ge 0\).
+- `--l1-tau-min`: final $\tau$ when using annealing.
+- `--nonneg-sigma`: enforce $\sigma_g, \sigma_{g×e}, \sigma_{n×e}, \sigma_e \ge 0$.
 
 ### Variant split-half CV
 
 - `--cv-variants`: enable variant split-half cross-validation:
-  - fit \(\alpha\) on SNP half A, estimate \(\sigma\) on B; swap; average.
-- `--cv-z`: gate for zeroing out \(\sigma_{g×e}\) and \(\sigma_{n×e}\) if both held-out halves do not exceed \(|\sigma| \le z \cdot SE\).
+  - fit $\alpha$ on SNP half A, estimate $\sigma$ on B; swap; average.
+- `--cv-z`: gate for zeroing out $\sigma_{g×e}$ and $\sigma_{n×e}$ if both held-out halves do not exceed $|\sigma| \le z \cdot SE$.
 
 ### Output control & logging
 
@@ -259,10 +259,6 @@ Given `--save-files PREFIX`, ENGINE can produce:
   - simulated phenotypes,
   - Hutchinson probes,
   - optimization initialization.
-- To reproduce a run exactly, record:
-  - all command-line arguments,
-  - ENGINE commit hash,
-  - Python and package versions.
 
 ---
 
