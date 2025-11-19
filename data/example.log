@@ -1,0 +1,27 @@
+PLINK v1.90b6.24 64-bit (6 Jun 2021)
+Options in effect:
+  --dummy 10000 10000
+  --make-bed
+  --out example
+
+Hostname: n6426
+Working directory: /u/scratch/z/zhengton/nonlinear_gxe/scripts/github/example_data
+Start time: Tue Nov 18 16:05:36 2025
+
+Random number seed: 1763510737
+192097 MB RAM detected; reserving 96048 MB for main workspace.
+Allocated 17094 MB successfully, after larger attempt(s) failed.
+Dummy data (10000 people, 10000 SNPs) written to example-temporary.bed +
+example-temporary.bim + example-temporary.fam .
+10000 variants loaded from .bim file.
+10000 people (0 males, 10000 females) loaded from .fam.
+10000 phenotype values loaded from .fam.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 10000 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is exactly 1.
+10000 variants and 10000 people pass filters and QC.
+Among remaining phenotypes, 5038 are cases and 4962 are controls.
+--make-bed to example.bed + example.bim + example.fam ... done.
+
+End time: Tue Nov 18 16:05:38 2025
