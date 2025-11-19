@@ -105,8 +105,8 @@ This script:
 - Uses `data/example` as the PLINK prefix (expects `example.bed/bim/fam`).
 - Uses `data/example.env` as the environment file.
 - Simulates a phenotype with:
-  - `N = 10,000` individuals (`--num-samples 10000`)
-  - `M = 10,000` SNPs (`--col-stop 10000`)
+  - `N = 10,000` individuals (`--num-samples 5000`)
+  - `M = 10,000` SNPs (`--col-stop 5000`)
   - variance components `σ_g = 0.5`, `σ_g×e = 0.05`, `σ_n×e = 0.05`.
 - Restricts to a subset of lifestyle environments:
   ```bash
@@ -147,8 +147,8 @@ Basic simulated-phenotype run:
 python3 engine.py \
     --bed-prefix data/example \
     --env-file data/example.env \
-    --num-samples 10000 \
-    --col-stop 10000 \
+    --num-samples 5000 \
+    --col-stop 5000 \
     --sigma-g 0.5 \
     --sigma-gxe 0.05 \
     --sigma-nxe 0.05 \
@@ -193,7 +193,7 @@ for the full help message.
 - `--pheno-file`: phenotype file (optional).
 - `--pheno-name`: phenotype column name in `--pheno-file` (default: `PHENO`).
 - `--num-samples`: number of individuals to use (rows subset from PLINK).
-- `--col-start`, `--col-stop`: SNP index range \([start, stop)\); `--col-stop -1` → use all SNPs.
+- `--col-start`, `--col-stop`: SNP index range \([start, stop]\); `--col-stop -1` → use all SNPs.
 
 ### Simulation parameters
 

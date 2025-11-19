@@ -3,8 +3,8 @@
 geno=data/example
 env_file=data/example.env
 
-num_indv=10000
-num_snps=10000
+num_indv=5000
+num_snps=5000
 sigma_g=0.5
 sigma_gxe=0.05
 sigma_nxe=0.05
