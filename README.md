@@ -264,5 +264,5 @@ Given `--save-files PREFIX`, ENGINE can produce:
 
 ## Citing ENGINE
 
-If you use ENGINE in your work, please cite:
+If you use ENGINE in your work, please cite: https://www.biorxiv.org/content/10.64898/2026.03.13.711725v1
 
